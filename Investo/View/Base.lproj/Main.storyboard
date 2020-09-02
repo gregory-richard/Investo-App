@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="Investo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Ig7-8U-cAu" userLabel="Main Stack">
+                                <rect key="frame" x="30" y="84" width="354" height="738"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="emz-5o-rmD" userLabel="Einkommen Stack">
+                                        <rect key="frame" x="0.0" y="0.0" width="354" height="181"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Einkommen" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tj9-ng-ae3" userLabel="Einkommen Titel">
+                                                <rect key="frame" x="0.0" y="0.0" width="354" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="V7n-Ur-GwG"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="RCO-wI-mqL" userLabel="Mein Einkommen">
+                                                <rect key="frame" x="0.0" y="60" width="354" height="27"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Mein Einkommen: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1sw-RD-XCf">
+                                                        <rect key="frame" x="0.0" y="0.0" width="332" height="27"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="230" id="hhe-lB-qUo"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="0$" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kpu-og-xWi">
+                                                        <rect key="frame" x="333" y="0.0" width="21" height="27"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="27" id="IOs-Uc-ecP"/>
+                                                </constraints>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qkh-l6-IX7" userLabel="Einkommen verändern">
+                                                <rect key="frame" x="0.0" y="107" width="354" height="27"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Einkommen verändern:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A7N-Py-dEe">
+                                                        <rect key="frame" x="0.0" y="0.0" width="260" height="27"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="1000" translatesAutoresizingMaskIntoConstraints="NO" id="C0e-vS-Pgd">
+                                                        <rect key="frame" x="260" y="0.0" width="94" height="27"/>
+                                                        <connections>
+                                                            <action selector="incomeStepperPressed:" destination="BYZ-38-t0r" eventType="valueChanged" id="ayW-fV-P3J"/>
+                                                        </connections>
+                                                    </stepper>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="27" id="gne-hI-DtL"/>
+                                                </constraints>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GhL-Cz-dYZ" userLabel="Schrittgrösse">
+                                                <rect key="frame" x="0.0" y="154" width="354" height="27"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Schrittgrösse:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6HV-rN-tiT">
+                                                        <rect key="frame" x="0.0" y="0.0" width="241" height="27"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="Ri9-Ur-xQw" userLabel="Buttons Stack">
+                                                        <rect key="frame" x="241" y="0.0" width="113" height="27"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OI5-f0-zC5">
+                                                                <rect key="frame" x="0.0" y="0.0" width="35" height="27"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="22" id="WTD-ir-VEm"/>
+                                                                </constraints>
+                                                                <state key="normal" title="1$"/>
+                                                                <connections>
+                                                                    <action selector="incomeButtonsPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="m7x-P8-uEQ"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mcA-Ab-hVM">
+                                                                <rect key="frame" x="36" y="0.0" width="35" height="27"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="35" id="3PP-5e-k5J"/>
+                                                                </constraints>
+                                                                <state key="normal" title="10$"/>
+                                                                <connections>
+                                                                    <action selector="incomeButtonsPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2jA-6W-8KL"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W2F-6K-6qI">
+                                                                <rect key="frame" x="72" y="0.0" width="41" height="27"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="40" id="cBr-ky-XmC"/>
+                                                                </constraints>
+                                                                <state key="normal" title="100$"/>
+                                                                <connections>
+                                                                    <action selector="incomeButtonsPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Yhs-Dl-gvR"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="27" id="C8f-PQ-Qgn"/>
+                                                </constraints>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="A0N-E8-yT8" userLabel="Vermögen Stack">
+                                        <rect key="frame" x="0.0" y="269.5" width="354" height="181"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vermögen" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Se-JD-voM" userLabel="Vermögen Titel">
+                                                <rect key="frame" x="0.0" y="0.0" width="354" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="Iti-XF-aAg"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="ZNH-sX-9n5" userLabel="Mein Vermögen">
+                                                <rect key="frame" x="0.0" y="60" width="354" height="27"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Mein Vermögen: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2c3-Ee-PgL">
+                                                        <rect key="frame" x="0.0" y="0.0" width="332" height="27"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="140" id="AKn-8s-vAz"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="0$" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1sE-kn-ewd">
+                                                        <rect key="frame" x="333" y="0.0" width="21" height="27"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="27" id="kdA-Af-2y7"/>
+                                                </constraints>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YSA-gv-Vxq" userLabel="Vermögen ändern">
+                                                <rect key="frame" x="0.0" y="107" width="354" height="27"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vermögen verändern:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bXo-u9-Jd3">
+                                                        <rect key="frame" x="0.0" y="0.0" width="260" height="27"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="10000" translatesAutoresizingMaskIntoConstraints="NO" id="NUX-Wy-64h">
+                                                        <rect key="frame" x="260" y="0.0" width="94" height="27"/>
+                                                        <connections>
+                                                            <action selector="wealthStepperPressed:" destination="BYZ-38-t0r" eventType="valueChanged" id="msF-58-n4z"/>
+                                                        </connections>
+                                                    </stepper>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="27" id="doW-IO-THD"/>
+                                                </constraints>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x6X-hR-dgE" userLabel="Schrittgrösse">
+                                                <rect key="frame" x="0.0" y="154" width="354" height="27"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Schrittgrösse:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sTo-Gv-fmf">
+                                                        <rect key="frame" x="0.0" y="0.0" width="188.5" height="27"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="IxB-UN-SjN" userLabel="Buttons Stack">
+                                                        <rect key="frame" x="188.5" y="0.0" width="165.5" height="27"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BBr-oK-Ypz">
+                                                                <rect key="frame" x="0.0" y="0.0" width="35" height="27"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="22" id="gvq-CI-5no"/>
+                                                                </constraints>
+                                                                <state key="normal" title="1$"/>
+                                                                <connections>
+                                                                    <action selector="wealthButtonsPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vf8-a3-53w"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vey-m6-zzr">
+                                                                <rect key="frame" x="36" y="0.0" width="35" height="27"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="35" id="BBh-LV-Fze"/>
+                                                                </constraints>
+                                                                <state key="normal" title="10$"/>
+                                                                <connections>
+                                                                    <action selector="wealthButtonsPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SmY-6A-Z4S"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rs0-f7-smy">
+                                                                <rect key="frame" x="72" y="0.0" width="40.5" height="27"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="40" id="ell-RG-Mfz"/>
+                                                                </constraints>
+                                                                <state key="normal" title="100$"/>
+                                                                <connections>
+                                                                    <action selector="wealthButtonsPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sle-ha-5Jf"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EBZ-Xi-rdN">
+                                                                <rect key="frame" x="113.5" y="0.0" width="52" height="27"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="45" id="vHB-Xz-9BB"/>
+                                                                </constraints>
+                                                                <state key="normal" title="1000$"/>
+                                                                <connections>
+                                                                    <action selector="wealthButtonsPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gFl-2q-PiK"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="27" id="4DH-Jh-uze"/>
+                                                        </constraints>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="Iyd-se-tHn" userLabel="Divider Stack">
+                                        <rect key="frame" x="0.0" y="539.5" width="354" height="60"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jDF-Zq-QmG" userLabel="Divider">
+                                                <rect key="frame" x="0.0" y="0.0" width="354" height="1"/>
+                                                <color key="backgroundColor" systemColor="systemGray2Color" red="0.68235294120000001" green="0.68235294120000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="1" id="HlP-Ui-Z7d"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qTh-Zi-YSp">
+                                                <rect key="frame" x="0.0" y="2" width="354" height="56"/>
+                                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="20"/>
+                                                <state key="normal" title="Einkommen einkassieren"/>
+                                                <connections>
+                                                    <action selector="getIncomePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Jmo-0T-3l7"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CeS-8N-XmL" userLabel="Divider">
+                                                <rect key="frame" x="0.0" y="59" width="354" height="1"/>
+                                                <color key="backgroundColor" systemColor="systemGray2Color" red="0.68235294120000001" green="0.68235294120000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="1" id="GVr-4u-0gN"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="nwV-3Y-yOf"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="jii-PI-EvN" userLabel="Bottom Buttons">
+                                        <rect key="frame" x="0.0" y="688" width="354" height="50"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VqU-DE-eg1">
+                                                <rect key="frame" x="0.0" y="0.0" width="153" height="50"/>
+                                                <state key="normal" title="Kaufen" image="cart.fill.badge.plus" catalog="system">
+                                                    <color key="titleColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="actionCardButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Dzj-Jk-IDx"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GU5-US-eIu">
+                                                <rect key="frame" x="154" y="0.0" width="200" height="50"/>
+                                                <state key="normal" title="Verkaufen" image="cart.fill.badge.minus" catalog="system">
+                                                    <color key="titleColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="Kl4-VD-63u"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Ig7-8U-cAu" secondAttribute="bottom" constant="40" id="7lC-tM-MUe"/>
+                            <constraint firstItem="Ig7-8U-cAu" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="Rs6-9E-peA"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Ig7-8U-cAu" secondAttribute="trailing" constant="10" id="c9W-Wf-ED9"/>
+                            <constraint firstItem="Ig7-8U-cAu" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="10" id="vgG-25-0Ws"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="firstIncomeButton" destination="OI5-f0-zC5" id="1qy-5r-UoV"/>
+                        <outlet property="firstWealthButton" destination="BBr-oK-Ypz" id="6Lp-X8-jD7"/>
+                        <outlet property="fourthWealthButton" destination="EBZ-Xi-rdN" id="jO4-Va-UuK"/>
+                        <outlet property="incomeLabel" destination="Kpu-og-xWi" id="j9M-Kb-qJj"/>
+                        <outlet property="incomeStepper" destination="C0e-vS-Pgd" id="ja8-Hh-69L"/>
+                        <outlet property="secondIncomeButton" destination="mcA-Ab-hVM" id="gMa-vu-3Dq"/>
+                        <outlet property="secondWealthButton" destination="Vey-m6-zzr" id="MNx-zu-som"/>
+                        <outlet property="thirdIncomeButton" destination="W2F-6K-6qI" id="ars-J5-7ya"/>
+                        <outlet property="thirdWealthButton" destination="rs0-f7-smy" id="DSn-cQ-5pI"/>
+                        <outlet property="wealthLabel" destination="1sE-kn-ewd" id="lUJ-Xl-5qP"/>
+                        <outlet property="wealthStepper" destination="NUX-Wy-64h" id="liC-RE-6VB"/>
+                        <segue destination="nTS-yh-LSP" kind="show" identifier="mySegue" id="i7w-jj-G2C"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="132" y="137.4384236453202"/>
+        </scene>
+        <!--Second View Controller-->
+        <scene sceneID="RcF-Sw-h9Z">
+            <objects>
+                <viewController id="nTS-yh-LSP" customClass="SecondViewController" customModule="Investo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fXN-aR-74c">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n59-jS-KxN">
+                                <rect key="frame" x="164" y="339" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="testButtonPressed:" destination="nTS-yh-LSP" eventType="touchUpInside" id="m1z-IJ-o9v"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="gcL-sR-VTN"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="LeB-gw-9Rm"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4f0-1n-IMR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="930" y="137"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="cart.fill.badge.minus" catalog="system" width="128" height="98"/>
+        <image name="cart.fill.badge.plus" catalog="system" width="128" height="98"/>
+    </resources>
+</document>
